@@ -1,14 +1,14 @@
 # Wine Quality Prediction
 
-A machine learning project that predicts wine quality using Random Forest Classification. The model classifies wines into two categories (good/poor quality) based on their physicochemical properties.
+A machine learning project that implements multiple models (Random Forest, SVM, Logistic Regression) to predict wine quality based on physicochemical properties. The models classify wines into two categories (good/poor quality) through a user-friendly web interface.
 
 ## Project Overview
 
-This project uses a Random Forest Classifier to predict wine quality based on various chemical properties. The model has been trained on the Red Wine Quality dataset and implemented as a web application using Streamlit.
+This project uses multiple machine learning models to predict wine quality based on chemical properties. The models have been trained on the Red Wine Quality dataset and implemented as a web application using Streamlit. Users can choose between Random Forest and SVM models for predictions.
 
 ## Features
 
-The model takes into account the following wine characteristics:
+The models take into account the following wine characteristics:
 - Fixed Acidity
 - Volatile Acidity
 - Citric Acid
@@ -23,6 +23,7 @@ The model takes into account the following wine characteristics:
 
 ## Model Performance
 
+### Random Forest Model
 - Accuracy: 90%
 - Precision: 
   - Poor Quality (0): 96%
@@ -34,13 +35,20 @@ The model takes into account the following wine characteristics:
   - Poor Quality (0): 95%
   - Good Quality (1): 54%
 
+### SVM Model
+- Accuracy: 86%
+
 ## Project Structure
 
 ```
 ├── app.py                     # Streamlit web application
-├── random_forest_model.pkl    # Trained model
-├── RandomForest.ipynb        # Model development notebook  
-└── winequality-red.csv       # Dataset
+├── random_forest_model.pkl    # Trained Random Forest model
+├── svm_model.pkl             # Trained SVM model
+├── logistic_model.pkl        # Trained Logistic Regression model
+├── RandomForest.ipynb        # Random Forest development notebook
+├── SVM-final.ipynb          # SVM development notebook
+├── Logistic.ipynb           # Logistic Regression development notebook
+└── winequality-red.csv      # Dataset
 ```
 
 ## Installation
@@ -65,6 +73,7 @@ The data processing pipeline includes:
 - Feature importance analysis using Random Forest
 - Binary classification (0: quality < 7, 1: quality >= 7)
 - Train-test split (80-20) with model evaluation
+- Multiple model implementations (Random Forest, SVM, Logistic Regression)
 
 ## Technologies Used
 
@@ -75,6 +84,7 @@ The data processing pipeline includes:
 - Seaborn
 - Matplotlib
 - Streamlit
+- Joblib
 
 ## Contributing
 
@@ -82,4 +92,4 @@ Feel free to fork the project and submit pull requests.
 
 ## License
 
-This project is licensed under
+This project is open source and available
